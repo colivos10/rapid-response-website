@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function ContactSection() {
   const { toast } = useToast();
@@ -28,17 +29,35 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.organizationType || !formData.name || !formData.email) {
+      toast({
+        title: "Missing Required Fields",
+        description: "Please fill in organization type, name, and email.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
-    // todo: remove mock functionality - replace with actual API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Demo Request Sent",
-      description: "We'll be in touch within 24 hours.",
-    });
+    try {
+      await apiRequest("POST", "/api/contact", formData);
+      
+      setIsSubmitted(true);
+      toast({
+        title: "Demo Request Sent",
+        description: "We'll be in touch within 24 hours.",
+      });
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Something went wrong. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
