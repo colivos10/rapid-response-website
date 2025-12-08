@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Activity, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import brandLogo from "@assets/rapid-response-logo.png";
 
 interface NavigationProps {
   onRequestDemo: () => void;
@@ -33,11 +34,14 @@ export default function Navigation({ onRequestDemo }: NavigationProps) {
         <div className="flex items-center justify-between h-16 gap-4">
           <a 
             href="#" 
-            className="flex items-center gap-2 flex-shrink-0"
+            className="flex items-center flex-shrink-0"
             data-testid="link-home"
           >
-            <Activity className="h-6 w-6 text-primary" />
-            <span className="font-semibold text-lg tracking-tight">Rapid Response</span>
+            <img 
+              src={brandLogo} 
+              alt="Rapid Response" 
+              className="h-8 w-auto"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-6 flex-wrap">

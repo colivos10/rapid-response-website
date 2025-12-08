@@ -1,5 +1,5 @@
-import { Activity } from "lucide-react";
 import { SiLinkedin, SiX } from "react-icons/si";
+import brandLogo from "@assets/rapid-response-logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,9 +9,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4" data-testid="link-footer-home">
-              <Activity className="h-6 w-6 text-primary" />
-              <span className="font-semibold text-lg tracking-tight">Rapid Response</span>
+            <a href="#" className="flex items-center mb-4" data-testid="link-footer-home">
+              <img 
+                src={brandLogo} 
+                alt="Rapid Response" 
+                className="h-8 w-auto"
+              />
             </a>
             <p className="text-muted-foreground text-sm max-w-md mb-6">
               Using advanced optimization technology to reduce emergency response 
