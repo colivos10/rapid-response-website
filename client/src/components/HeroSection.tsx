@@ -19,14 +19,6 @@ export default function HeroSection({ onRequestDemo }: HeroSectionProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-20">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-          <span className="text-sm text-white/90">Now operating in Chile</span>
-        </div>
-
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
           Saving Lives with
           <span className="block text-primary-foreground">Optimization</span>
