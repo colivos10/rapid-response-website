@@ -4,35 +4,26 @@ import { Building2, Ambulance, Shield, Landmark, Hospital } from "lucide-react";
 const audiences = [
   {
     icon: Landmark,
-    title: "Agencias Gubernamentales",
-    description: "Ministerios de salud y autoridades de gestión de emergencias",
+    title: "Presentaciones en conferencias internacionales",
+    description: "Investigación Aplicada",
     benefits: [
-      "Optimizar la cobertura de la flota pública de emergencia",
-      "Asignación de recursos basada en datos",
-      "Mejoras medibles en resultados",
-      "Métricas de rendimiento transparentes",
+      "La base científica de Rapid Response ha sido presentada en conferencias de investigación de operaciones y sistemas de salud, fortaleciendo la validación técnica del modelo y su aplicabilidad en contextos reales",
     ],
   },
   {
     icon: Ambulance,
-    title: "Servicios de Ambulancias Privadas",
-    description: "Proveedores comerciales de servicios médicos de emergencia y empresas de transporte",
+    title: "Plan piloto en Antofagasta y Coquimbo",
+    description: "Piloto 2019 - 2022",
     benefits: [
-      "Reducir costos operativos",
-      "Mejorar el cumplimiento del nivel de servicio",
-      "Ventaja competitiva a través de respuesta más rápida",
-      "Optimización de utilización de flota",
+      "Implementamos un piloto para optimizar la ubicación de bases SAMU y mejorar la cobertura de ambulancias. El sistema analizó miles de escenarios y mostró una mejora en la cobertura de 8 minutos de 30%"
     ],
   },
   {
     icon: Shield,
-    title: "Policía y Servicios de Emergencia",
-    description: "Organizaciones de aplicación de la ley y primeros respondedores",
+    title: "Adjudicación fondo Startup Ciencia 2025",
+    description: "Investigación Aplicada",
     benefits: [
-      "Optimización de rutas de patrullaje",
-      "Posicionamiento de respuesta a incidentes",
-      "Coordinación interagencial",
-      "Análisis de brechas de cobertura",
+      "Rapid Response fue adjudicada en Startup Ciencia 2025, respaldo que permitirá acelerar su implementación en servicios de emergencia y reducir tiempos críticos",
     ],
   },
 ];
@@ -43,11 +34,10 @@ export default function AudienceSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-            A Quién Servimos
+            Impacto comprobado
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nuestra plataforma de optimización se adapta a las necesidades únicas de diversas 
-            organizaciones responsables de la respuesta de emergencia.
+            Nuestra plataforma se ha desarrollado y validado en colaboración con instituciones de salud y proyectos de investigación aplicada
           </p>
         </div>
 

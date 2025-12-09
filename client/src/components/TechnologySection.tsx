@@ -1,9 +1,9 @@
 import { Card } from "@/components/ui/card";
-import { BarChart3, MapPinned, Cpu, Building2 } from "lucide-react";
+import { BarChart3, List, Rocket, MonitorCheck } from "lucide-react";
 
 const features = [
   {
-    icon: Building2,
+    icon: List,
     title: "Registro de emergencias",
     description: "Registra cada emergencia con rapidez y precisión: ubicación, tipo de evento y datos del paciente. Todo queda organizado en un historial accesible que mejora la trazabilidad y la toma de decisiones.",
   },
@@ -13,12 +13,12 @@ const features = [
     description: "Analiza cobertura, demanda y tiempos de respuesta en una vista integrada, permitiendo identificar brechas y evaluar mejoras operativas con datos reales.",
   },
   {
-    icon: MapPinned,
+    icon: MonitorCheck,
     title: "Panel operativo en tiempo real",
     description: "Visualiza en un mapa la ubicación de ambulancias, bases, tiempos estimados de llegada y nivel de ocupación del sistema.",
   },
   {
-    icon: Cpu,
+    icon: Rocket,
     title: "Simulación",
     description: "Evalúa escenarios ¿qué pasaría si..? para justificar inversiones, abrir nuevas bases, modificar turnos o rediseñar la red de atención, usando evidencia cuantitativa.",
   },

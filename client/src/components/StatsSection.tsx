@@ -1,9 +1,9 @@
 import { Card } from "@/components/ui/card";
-import { Clock, Heart, MapPin } from "lucide-react";
+import { Clock, Activity, Ambulance } from "lucide-react";
 
 const stats = [
   {
-    icon: Heart,
+    icon: Activity,
     value: "90%",
     label: "Tasa de mortalidad",
     description: "En paros cardiorrespiratorio si la ayuda llega tarde",
@@ -15,7 +15,7 @@ const stats = [
     description: "Después de este tiempo, la sobrevida cae a 10%",
   },
   {
-    icon: MapPin,
+    icon: Ambulance,
     value: "30%",
     label: "Cobertura efectiva",
     description: "Optimizando la flota actual, mas impacto con los mismos recursos",

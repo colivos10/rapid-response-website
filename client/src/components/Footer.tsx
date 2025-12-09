@@ -31,15 +31,6 @@ export default function Footer() {
               >
                 <SiLinkedin className="h-5 w-5" />
               </a>
-              <a 
-                href="https://x.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover-elevate active-elevate-2 p-2 rounded-md"
-                data-testid="link-twitter"
-              >
-                <SiX className="h-5 w-5" />
-              </a>
             </div>
           </div>
 

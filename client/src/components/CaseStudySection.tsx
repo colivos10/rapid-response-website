@@ -56,7 +56,7 @@ export default function CaseStudySection() {
           {teamMembers.slice(0, 3).map((member, index) => (
             <Card key={index} className="p-6 text-center">
               <div className="flex flex-col items-center">
-                <div className="w-24 h-24 rounded-full bg-muted mb-4 overflow-hidden flex items-center justify-center">
+                <div className="w-24 h-24 rounded-full mb-4 overflow-hidden flex items-center justify-center">
                   <img 
                     src={member.image} 
                     alt={member.name}
@@ -86,7 +86,7 @@ export default function CaseStudySection() {
             {sponsors.map((sponsor, index) => (
               <Card key={index} className="p-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-32 h-32 mb-4 flex items-center justify-center bg-muted rounded-lg overflow-hidden mx-auto">
+                  <div className="w-32 h-32 mb-4 flex items-center justify-center rounded-lg overflow-hidden mx-auto">
                     <img 
                       src={sponsor.logo} 
                       alt={sponsor.name}
