@@ -29,32 +29,39 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!formData.organizationType || !formData.name || !formData.email) {
-      toast({
-        title: "Campos requeridos faltantes",
-        description: "Por favor complete el tipo de organización, nombre y correo electrónico.",
-        variant: "destructive",
-      });
-      return;
-    }
-    
     setIsSubmitting(true);
-    
+
     try {
-      await apiRequest("POST", "/api/contact", formData);
-      
-      setIsSubmitted(true);
-      toast({
-        title: "Solicitud de prueba enviada",
-        description: "Nos pondremos en contacto dentro de 24 horas.",
+      // ⚠️ IMPORTANTE: Reemplaza "TU_CODIGO_AQUI" con el código que te dio Formspree (ej: xmqzbdpa)
+      // El link completo se verá tipo: "https://formspree.io/f/xmqzbdpa"
+      const response = await fetch("https://formspree.io/projects/2888524330751229547/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData), // Enviamos los datos que ya tienes capturados
       });
+
+      if (response.ok) {
+        // ÉXITO: Aquí puedes poner una alerta o limpiar el formulario
+        alert("¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.");
+        
+        // Limpiamos el formulario
+        setFormData({
+            organizationType: "",
+            name: "",
+            email: "",
+            phone: "",
+            message: ""
+        });
+      } else {
+        // ERROR DE FORMSPREE
+        alert("Hubo un error al enviar el formulario. Por favor intenta de nuevo.");
+      }
     } catch (error) {
-      toast({
-        title: "Envío fallido",
-        description: "Algo salió mal. Por favor intente nuevamente o contáctenos directamente.",
-        variant: "destructive",
-      });
+      // ERROR DE RED
+      alert("Error de conexión. Revisa tu internet.");
+      console.error("Error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -101,7 +108,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-          <Card className="lg:col-span-3 p-6 lg:p-8">
+          <Card className="lg:col-span-3 p-6 lg:p-6">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="organizationType">Tipo de Organización</Label>

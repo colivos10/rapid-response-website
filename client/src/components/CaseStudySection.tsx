@@ -40,7 +40,7 @@ const sponsors = [
 
 export default function CaseStudySection() {
   return (
-    <section id="impact" className="py-16 lg:py-16 bg-primary/5" data-testid="section-case-study">
+    <section className="py-16 lg:py-12 bg-primary/5" data-testid="section-case-study">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-8 lg:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">

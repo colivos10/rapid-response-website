@@ -40,7 +40,7 @@ export default function Navigation({ onRequestDemo }: NavigationProps) {
             <img 
               src={brandLogo} 
               alt="Rapid Response" 
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </a>
 
