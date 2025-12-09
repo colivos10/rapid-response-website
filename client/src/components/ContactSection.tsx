@@ -34,7 +34,7 @@ export default function ContactSection() {
     try {
       // ⚠️ IMPORTANTE: Reemplaza "TU_CODIGO_AQUI" con el código que te dio Formspree (ej: xmqzbdpa)
       // El link completo se verá tipo: "https://formspree.io/f/xmqzbdpa"
-      const response = await fetch("https://formspree.io/projects/2888524330751229547/", {
+      const response = await fetch("https://formspree.io/f/mnnebedg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
